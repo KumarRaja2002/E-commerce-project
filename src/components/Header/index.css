@@ -113,7 +113,10 @@ body {
   padding: 8px 12px;
   cursor: pointer;
   font-size: 14px;
-  margin-left: 15px;
+  width: 100%;
+  max-width: 200px; /* Maximum width */
+  margin: 20px 0; /* Top and bottom margin */
+  text-align: center;
 }
 
 /* Hover Effect for Logout Button */
@@ -141,24 +144,23 @@ body {
     flex-wrap: wrap;
   }
 
-  /* Move Logout Button Below */
+  /* Center Logout Button Below Other Elements */
   .logout-button {
-    width: 100%;
-    max-width: 200px;
-    margin-left: 0;
-    margin-top: 10px;
-    order: 2; /* Ensures logout button appears below other elements */
+    margin-top: 20px; /* Added margin-top to provide space */
+    align-self: center; /* Center the button */
+    text-align: center;
   }
 }
 
 /* Extra Large Screens */
 @media (min-width: 1201px) {
-  /* Keep default behavior for extra large screens */
   .header-container {
     flex-direction: row;
   }
 
+  /* Ensure the logout button stays inline with other elements */
   .logout-button {
-    order: 0; /* Keep logout button inline with other elements */
+    order: 0; /* Default order for large screens */
+    margin-left: 15px; /* Margin for the logout button */
   }
 }

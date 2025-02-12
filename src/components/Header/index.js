@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'; // For navigation
 import Cookies from 'js-cookie';
@@ -61,8 +59,10 @@ const Header = () => {
         <a href="/account">Account</a>
         <a href="/carts">Cart</a>
         {userType === 'ADMIN' && <a href="/admin">Admin Settings</a>}
-        <button onClick={handleLogout} className="logout-button">Logout</button>
       </nav>
+      <div className="logout-container">
+        <button onClick={handleLogout} className="logout-button">Logout</button>
+      </div>
     </header>
   );
 };
