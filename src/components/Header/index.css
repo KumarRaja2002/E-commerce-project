@@ -16,6 +16,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap; /* Allows elements to wrap */
 }
 
 /* Logo Styles */
@@ -36,6 +37,7 @@ body {
   position: relative;
   flex: 1;
   margin: 0 20px;
+  min-width: 250px;
 }
 
 .search-input {
@@ -81,20 +83,11 @@ body {
   color: white;
 }
 
-.search-item:first-of-type {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.search-item:last-of-type {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
 /* Nav Links Styles */
 .nav-links {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -107,10 +100,11 @@ body {
 }
 
 .nav-links a:hover {
-  transform: scale(1.1); /* Slightly enlarge */
+  transform: scale(1.1);
   font-weight: bold;
 }
 
+/* Logout Button */
 .logout-button {
   background-color: #007bff;
   color: white;
@@ -122,51 +116,49 @@ body {
   margin-left: 15px;
 }
 
+/* Hover Effect for Logout Button */
 .logout-button:hover {
   background-color: #e60000;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+/* Responsive Styling */
+@media (max-width: 1200px) {
   .header-container {
     flex-direction: column;
     align-items: center;
-    padding: 15px; /* Adjust padding for mobile */
-  }
-
-  .logo {
-    margin-bottom: 10px; /* Space between logo and other elements */
+    text-align: center;
   }
 
   .search-bar {
+    width: 100%;
+    max-width: 500px;
     margin: 10px 0;
-    width: 80%; /* Make the search bar smaller on mobile */
-  }
-
-  .search-input {
-    padding: 10px;
-    font-size: 14px; /* Adjust input size */
   }
 
   .nav-links {
     justify-content: center;
-    margin-top: 10px;
-    gap: 15px; /* Reduced gap between links */
+    gap: 15px;
+    flex-wrap: wrap;
   }
 
-  .nav-links a {
-    font-size: 14px; /* Smaller font size for mobile */
-    padding: 8px 12px; /* Adjust padding for better fit */
+  /* Move Logout Button Below */
+  .logout-button {
+    width: 100%;
+    max-width: 200px;
+    margin-left: 0;
+    margin-top: 10px;
+    order: 2; /* Ensures logout button appears below other elements */
+  }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1201px) {
+  /* Keep default behavior for extra large screens */
+  .header-container {
+    flex-direction: row;
   }
 
   .logout-button {
-    font-size: 14px;
-    padding: 8px 12px;
-    margin-left: 0; /* Remove left margin for better alignment */
-    margin-top: 10px; /* Add margin-top for separation */
-  }
-
-  .search-results {
-    max-height: 150px; /* Adjust dropdown height for mobile */
+    order: 0; /* Keep logout button inline with other elements */
   }
 }
