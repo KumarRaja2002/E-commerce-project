@@ -1,0 +1,241 @@
+/* Account.css */
+.account-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  padding: 6px;
+  border-radius: 5px;
+  background: #f8f8f8;
+}
+
+input {
+  font-size: 16px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+.edit-btn {
+  background: #007bff;
+  color: white;
+}
+
+.update-btn {
+  background: #28a745;
+  color: white;
+}
+
+
+.edit-btn:hover {
+  background: #0056b3;
+}
+
+
+.update-btn:hover {
+  background: #218838;
+}
+
+/* Bouncing Dots Loader */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px; /* Ensures the dots stay in a straight row */
+  background-color: #007bff;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+  display: inline-block; /* Ensures they stay in a row */
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* Adjust bounce height */
+  }
+}
+
+
+
+/* Success Popup */
+.success-popup {
+  position: fixed;
+  top: 10%;
+  right: 10px;
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .account-container {
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .profile-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 4px;
+  }
+
+  .edit-btn, .update-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Media Queries for Medium Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .account-container {
+    max-width: 80%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .profile-details {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  input {
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .edit-btn, .update-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Media Queries for Extra Small Devices (max-width: 400px) */
+@media (max-width: 400px) {
+  .account-container {
+    max-width: 95%;
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .profile-details {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  label {
+    font-size: 11px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .edit-btn, .update-btn {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .loading-container {
+    margin-top: 15px;
+  }
+}

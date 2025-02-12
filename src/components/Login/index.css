@@ -1,0 +1,279 @@
+/* Container for login, signup, and forgot password forms */
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: relative; /* To position the spinner inside */
+}
+
+.login-background {
+  height: 100vh;
+  background-image: url('../../images/2593120.webp');
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Sign In Button */
+.signin-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-btn:hover {
+  background-color: #3c78b0; /* Darker shade for hover */
+}
+
+.signin-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container btn {
+  background-color: #007bff; /* Blue color for sign-in button */
+  color: white;
+}
+
+.btn {
+  color: #007bff;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Link button for forgot password and sign up */
+.link-btn {
+  background: none;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Spinner for loading state */
+.spinner-login {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 20px; /* Smaller size for the spinner */
+  height: 20px; /* Smaller size for the spinner */
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styling for show signup and forgot password */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Position signup and forgot password forms on the same line */
+.container.show-signup .signup,
+.container.show-forgot-password .forgot-password {
+  display: block;
+}
+
+/* Making forms appear side by side */
+.login-container,
+.signup,
+.forgot-password {
+  display: block;
+}
+
+/* Container for both Forgot Password and Sign Up buttons */
+.form-container {
+  display: flex;
+  justify-content: space-between; /* Position buttons at opposite ends */
+  gap: 100px;
+  width: 100%; /* Full width of the container */
+  margin-top: 20px; /* Space between form and buttons */
+}
+
+/* Button styles for forgot password and sign up */
+.form-container .link-btn {
+  background: none;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0; /* No padding */
+  margin: 0; /* No margin */
+  white-space: nowrap;
+}
+
+.form-container .link-btn:hover {
+  text-decoration: underline;
+}
+
+/* Spinner container to overlay on top of login container */
+.spinner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  z-index: 9999;
+}
+
+.spinner-container.show {
+  visibility: visible;
+}
+
+/* Prevent background color change on hover for the link buttons */
+.link-btn {
+  background-color: transparent;
+  color: #007bff;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+  background-color: transparent; /* No background change on hover */
+}
+
+/* New styling for the buttons container */
+.buttons-container {
+  display: flex;
+  justify-content: space-between; /* Ensures the buttons are at opposite ends */
+  width: 100%; /* Take up full width */
+  margin-top: 15px; /* Increase gap between the buttons */
+}
+
+.buttons-container .link-btn {
+  width: auto; /* Button takes just enough width */
+  margin: 0 15px; /* Larger gap between the buttons */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For larger screens (desktops) */
+@media (min-width: 1200px) {
+  .login-container {
+    width: 50%; /* Centered and smaller width on larger screens */
+  }
+
+  .form-container {
+    gap: 50px; /* Adjust the gap between buttons for large screens */
+  }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .login-container {
+    width: 70%; /* Increase the width on medium screens */
+  }
+
+  .form-container {
+    gap: 20px; /* Reduce gap between buttons on tablets */
+  }
+}
+
+/* For small screens (phones) */
+@media (max-width: 767px) {
+  .login-container {
+    width: 90%; /* Full width for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .form-container {
+    flex-direction: column; /* Stack the buttons vertically on small screens */
+    gap: 10px; /* Reduce the gap between buttons */
+  }
+}

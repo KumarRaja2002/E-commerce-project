@@ -1,0 +1,118 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the home section */
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for the carousel container */
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the carousel images */
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures images fill the slide container without distortion */
+  border-radius: 10px; /* Smooths the corners of the images */
+}
+/* Increase the size of default arrows */
+/* Increase dot size and add hover effect */
+.slick-dots {
+  bottom: 10px; /* Adjust positioning of the dots */
+  display: flex;
+  justify-content: center;
+}
+
+/* Increase dot size and add hover effect with light brown colors */
+.slick-dots {
+  bottom: 10px; /* Adjust positioning of the dots */
+  display: flex;
+  justify-content: center;
+  color:burlywood
+}
+
+.slick-dots li button {
+  width: 15px; /* Increase the size of the dots */
+  height: 15px; /* Increase the size of the dots */
+  border-radius: 50%; /* Make dots circular */
+  background-color: rgba(181, 101, 29, 0.5); /* Light brown color for default dot */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and size */
+}
+
+.slick-dots li.slick-active button {
+  background-color: rgba(181, 101, 29, 1); /* Light brown color for active dot */
+}
+
+.slick-dots li button:hover {
+  background-color: rgba(181, 101, 29, 0.8); /* Light brown hover effect */
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+@media (min-width: 1200px) {
+  .carousel-container {
+    max-width: 1200px; /* Keep the carousel width fixed for large screens */
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 35px; /* Larger arrows for large screens */
+  }
+
+  .slick-dots li button {
+    width: 20px; /* Larger dots for large screens */
+    height: 20px; /* Larger dots for large screens */
+  }
+}
+
+/* For medium screens (tablets in portrait mode) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .carousel-container {
+    padding: 10px; /* Less padding for medium screens */
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 28px; /* Slightly smaller arrows */
+  }
+
+  .slick-dots li button {
+    width: 18px; /* Medium size dots for medium screens */
+    height: 18px; /* Medium size dots for medium screens */
+  }
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+  .carousel-container {
+    padding: 10px; /* Less padding for mobile */
+    margin: 0 10px; /* Add margin on the sides for small devices */
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 25px; /* Smaller arrows for mobile */
+  }
+
+  .slick-dots li button {
+    width: 12px; /* Smaller dots for mobile */
+    height: 12px; /* Smaller dots for mobile */
+  }
+
+  .slick-dots {
+    bottom: 5px; /* Adjust the position of dots for mobile */
+  }
+}

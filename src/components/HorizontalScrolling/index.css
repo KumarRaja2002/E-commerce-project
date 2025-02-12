@@ -1,0 +1,105 @@
+/* HorizontalScroll.css */
+.horizontal-scroll {
+  margin-bottom: 24px;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 16px;
+  gap: 16px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Hide the scrollbar */
+  scrollbar-width: none;  /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;  /* For Chrome, Safari, and Opera */
+}
+
+.product-card-1 {
+  flex: 0 0 calc(25% - 16px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  min-width: 200px;
+  line-height: 1.4;
+}
+
+.product-card-1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* HorizontalScroll.css */
+.horizontal-scroll {
+  margin-bottom: 24px;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 16px;
+  gap: 16px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Hide the scrollbar */
+  scrollbar-width: none;  /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;  /* For Chrome, Safari, and Opera */
+}
+
+.product-card-1 {
+  flex: 0 0 calc(25% - 16px); /* 4 items in a row */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  min-width: 200px;
+  line-height: 1.4;
+}
+
+.product-card-1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For large screens (desktops) */
+@media (min-width: 1200px) {
+  .product-card-1 {
+    flex: 0 0 calc(25% - 16px); /* Show 4 cards per row */
+  }
+}
+
+/* For medium screens (tablets in landscape mode) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .product-card-1 {
+    flex: 0 0 calc(33.33% - 16px); /* Show 3 cards per row */
+  }
+}
+
+/* For small screens (tablets in portrait mode and smaller) */
+@media (max-width: 767px) {
+  .product-card-1 {
+    flex: 0 0 calc(50% - 16px); /* Show 2 cards per row */
+  }
+}
+
+/* For very small screens (mobile phones) */
+@media (max-width: 480px) {
+  .product-card-1 {
+    flex: 0 0 calc(100% - 16px); /* Show 1 card per row */
+  }
+}

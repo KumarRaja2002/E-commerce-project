@@ -1,0 +1,123 @@
+/* Default styling for large devices (above 768px) */
+.card-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.card-details-container {
+  background-color: white;
+  padding: 20px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-details-container img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.card-details-container h3 {
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+
+.card-details-container p {
+  margin: 10px 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Media Queries for Small Devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .card-details-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .card-details-container h3 {
+    font-size: 1.2em;
+  }
+
+  .card-details-container p {
+    font-size: 14px;
+  }
+
+  .card-details-container img {
+    max-height: 250px;
+  }
+
+  .close-btn {
+    font-size: 18px;
+  }
+}
+
+/* Media Queries for Medium Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .card-details-container {
+    width: 80%;
+    padding: 18px;
+  }
+
+  .card-details-container h3 {
+    font-size: 1.3em;
+  }
+
+  .card-details-container p {
+    font-size: 15px;
+  }
+
+  .card-details-container img {
+    max-height: 280px;
+  }
+
+  .close-btn {
+    font-size: 19px;
+  }
+}
+
+/* Media Queries for Extra Small Devices (max-width: 400px) */
+@media (max-width: 400px) {
+  .card-details-container {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .card-details-container h3 {
+    font-size: 1.1em;
+  }
+
+  .card-details-container p {
+    font-size: 13px;
+  }
+
+  .card-details-container img {
+    max-height: 220px;
+  }
+
+  .close-btn {
+    font-size: 16px;
+  }
+}
